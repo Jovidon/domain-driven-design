@@ -20,6 +20,5 @@
     ".eslintrc.js",
     ".gitignore",
     ".prettierrc.js",
-    "bitbucket-pipelines.yml"
   ]
 }
