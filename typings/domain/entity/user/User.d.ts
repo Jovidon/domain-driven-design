@@ -1,0 +1,35 @@
+import { Types } from 'mongoose';
+import { UserModelClass } from '../../../database';
+import { UserStatus, UserType } from '../../../definitions';
+import { IBaseEntity } from '../base';
+export declare class User implements IBaseEntity<User, UserModelClass> {
+    protected _id?: Types.ObjectId;
+    protected _fullName: string;
+    protected _email: string;
+    protected _password: string;
+    protected _twoStepAuthorizationEnabled: boolean;
+    protected _phone: string;
+    protected _tokenExpireMinutes: number;
+    protected _status: UserStatus;
+    protected _type: UserType;
+    buildId(id: Types.ObjectId): User;
+    buildFullName(fullName: string): User;
+    buildEmail(email: string): User;
+    buildPassword(password: string): User;
+    buildTwoStepAuthorizationEnabled(twoStepAuthorizationEnabled: boolean): User;
+    buildPhone(phone: string): User;
+    buildTokenExpireMinutes(tokenExpireMinutes: number): User;
+    buildStatus(status: UserStatus): User;
+    buildType(type: UserType): User;
+    getId(): Types.ObjectId;
+    getFullName(): string;
+    getEmail(): string;
+    getPassword(): string;
+    getTwoStepAuthorizationEnabled(): boolean;
+    getPhone(): string;
+    getTokenExpireMinutes(): number;
+    getStatus(): UserStatus;
+    getType(): UserType;
+    convertToEntity(user: UserModelClass): User;
+    convertToModelClass(): UserModelClass;
+}

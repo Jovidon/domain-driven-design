@@ -1,0 +1,64 @@
+{
+  "name": "ddd",
+  "private": true,
+  "version": "1.0.0",
+  "typings": "typings/index.d.ts",
+  "main": "dist/index.js",
+  "repository": "git@github.com:Jovidon/domain-driven-design.git",
+  "author": {
+    "name": "Jovid Khamrokulov",
+    "email": "jovidkhamrokulov@gmail.com"
+  },
+  "files": [
+    "typings/**/*.d.ts",
+    "dist/**/*.js",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rimraf typings dist && tsc",
+    "lint": "eslint . --ext .ts -c .eslintrc.js",
+    "test": "jest --detectOpenHandles --verbose --testTimeout=1200000 test"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "git add ."
+    ]
+  },
+  "dependencies": {
+    "@typegoose/typegoose": "^7.6.0",
+    "async-redis": "^2.0.0",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "5.10.18",
+    "nanoid": "^3.1.30"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/bcrypt": "^3.0.0",
+    "@types/faker": "^5.5.6",
+    "@types/jest": "^26.0.22",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/mongoose": "^5.10.4",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "faker": "^5.5.3",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "mongodb-memory-server": "^6.9.6",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}

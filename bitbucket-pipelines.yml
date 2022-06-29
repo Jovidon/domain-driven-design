@@ -1,0 +1,12 @@
+image: node:14.15.4
+
+pipelines:
+  default:
+    - step:
+        name: Test
+        script:
+          - echo 'Test'
+    - step:
+        name: Build
+        script:
+          - echo 'Build'
